@@ -1,0 +1,518 @@
+<!--最初に入れるやつ-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRAFT WEB STUDIO</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- headerここから -->
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__logo"> <a href="index.html">CRAFT WEB STUDIO</a> </h1> <!-- Desktop Navigation -->
+      <nav class="header__nav header__nav--desktop">
+        <ul class="header__nav-list">
+          <li><a href="#services" class="header__nav-link">Services</a></li>
+          <li><a href="#portfolio" class="header__nav-link">Portfolio</a></li>
+          <li><a href="#workflow" class="header__nav-link">Workflow</a></li>
+          <li><a href="#faq" class="header__nav-link">FAQ</a></li>
+        </ul> <a href="#contact" class="header__contact-btn">Contact</a>
+      </nav> <!-- Hamburger --> <button class="header__hamburger" id="js-hamburger" aria-label="メニューを開く"
+        aria-expanded="false"> <span class="header__hamburger-line"></span> <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span> </button>
+    </div> <!-- Mobile Menu -->
+    <div class="mobile-menu" id="js-mobile-menu">
+      <div class="mobile-menu__overlay" id="js-mobile-overlay"></div>
+      <nav class="mobile-menu__container">
+
+        <!-- Close Button -->
+        <button class="mobile-menu__close" id="js-menu-close" aria-label="メニューを閉じる">
+          <span></span>
+          <span></span>
+        </button>
+
+
+        <ul class="mobile-menu__list">
+          <li><a href="#services" class="mobile-menu__link">Services</a></li>
+          <li><a href="#portfolio" class="mobile-menu__link">Portfolio</a></li>
+          <li><a href="#workflow" class="mobile-menu__link">Workflow</a></li>
+          <li><a href="#faq" class="mobile-menu__link">FAQ</a></li>
+          <li> <a href="#contact" class="mobile-menu__contact-btn">Contact</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- headerここまで -->
+
+  <!-- Mainここから -->
+  <main>
+    <!-- Heroここから -->
+    <section class="hero">
+      <div class="hero__container">
+
+        <h1 class="hero__title section-title">
+          デザインの意図を、<br class="u-sp-only">正確にコードへ。
+        </h1>
+
+        <p class="hero__lead section-lead">
+          Figmaからの高精度なフロントエンドコーディングを提供します。<br>
+          デザインの細部まで忠実に再現し、ピクセルパーフェクトな実装を実現します。
+        </p>
+
+        <a href="#contact" class="hero__button">
+          お問い合わせ
+        </a>
+
+      </div>
+    </section>
+    <!-- Heroここまで -->
+
+    <!-- Service ここから -->
+    <section class="services" id="services">
+      <div class="services__container">
+
+        <div class="services__header">
+          <h2 class="section-title services__title">
+            Services
+          </h2>
+
+          <p class="section-lead services__lead">
+            デザインからコードへの変換<br class="u-sp-only">
+            に特化したサービス
+          </p>
+        </div>
+
+        <div class="services__list">
+
+          <article class="services__item">
+            <h3 class="section-title services__item-title">
+              Figma to HTML/CSS Coding
+            </h3>
+            <p class="section-lead services__item-text">
+              Figmaデザインを元に、セマンティックなHTML5とモダンなCSSで実装します。
+              デザインツールで作成されたビジュアルを、Web標準に準拠したクリーンなコードに変換し、
+              保守性の高いマークアップを提供します。
+            </p>
+          </article>
+
+          <article class="services__item">
+            <h3 class="section-title services__item-title">
+              Pixel-Perfect Implementation
+            </h3>
+            <p class="section-lead services__item-text">
+              デザインの意図を正確に理解し、1ピクセル単位での精密な実装を行います。
+              フォントサイズ、行間、余白など、すべての要素を忠実に再現します。
+            </p>
+          </article>
+
+          <article class="services__item">
+            <h3 class="section-title services__item-title">
+              Responsive & Accessible
+            </h3>
+            <p class="section-lead services__item-text">
+              レスポンシブデザインとアクセシビリティへの配慮を標準で行い、
+              すべてのユーザーが快適に利用できるWebサイトを構築します。
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- Service ここまで -->
+
+    <!-- Portfolio ここから -->
+<section class="portfolio" id="portfolio">
+  <div class="portfolio__cards">
+
+  <!-- Hair Salon -->
+ <a href="works/hair/index.html"> 
+  
+
+    <div class="portfolio__image-wrapper">
+      <img src="img/hair.jpg"
+           alt="美容室サイトのトップページデザイン"
+           class="portfolio__image">
+    </div>
+
+    <div class="portfolio__content">
+      <h3 class="portfolio__card-title section-title">
+        Hair Salon Website
+      </h3>
+
+      <p class="portfolio__card-text section-lead">
+        美容室向けコーポレートサイトの実装。<br>
+        余白設計とタイポグラフィを重視し、
+        上品なトーンで構築。
+      </p>
+
+      <div class="portfolio__tags">
+        <span class="portfolio__tag">HTML/CSS</span>
+        <span class="portfolio__tag">JavaScript</span>
+        <span class="portfolio__tag">Responsive</span>
+      </div>
+    </div>
+
+  </a>
+
+
+  <!-- Apparel LP -->
+<a href="works/apparel/index.html"> 
+  
+
+    <div class="portfolio__image-wrapper">
+      <img src="img/apparel.jpg"
+           alt="アパレルブランドLPデザイン"
+           class="portfolio__image">
+    </div>
+
+    <div class="portfolio__content">
+      <h3 class="portfolio__card-title section-title">
+        Apparel Landing Page
+      </h3>
+
+      <p class="portfolio__card-text section-lead">
+        ブランド訴求型ランディングページ。<br>
+        ビジュアルとCTA導線を意識した構成で設計。
+      </p>
+
+      <div class="portfolio__tags">
+        <span class="portfolio__tag">HTML/CSS</span>
+        <span class="portfolio__tag">JavaScript</span>
+        <span class="portfolio__tag">Responsive</span>
+      </div>
+    </div>
+
+  </a>
+
+</div>
+    <!-- Portfolio ここまで -->
+
+    <!-- Strengths ここから -->
+    <section class="strengths" id="strengths">
+      <div class="strengths__container">
+
+        <div class="strengths__header">
+          <h2 class="section-title strengths__title">Strengths</h2>
+          <p class="section-lead strengths__lead">
+            CRAFT WEB STUDIO の強み
+          </p>
+        </div>
+
+        <div class="strengths__cards">
+
+          <!-- Card 1 -->
+          <article class="strengths__card">
+            <div class="strengths__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="2" />
+              </svg>
+            </div>
+
+            <h3 class="strengths__card-title section-title">
+              Pixel-Perfect Implementation
+            </h3>
+
+            <p class="strengths__card-text section-lead">
+              デザインデータと実装結果を厳密に照合し、
+              ピクセル単位で忠実に再現します。
+              余白・フォント・行間・色味まで細部にこだわります。
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="strengths__card">
+            <div class="strengths__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="2" />
+              </svg>
+            </div>
+
+            <h3 class="strengths__card-title section-title">
+              Efficient Workflow
+            </h3>
+
+            <p class="strengths__card-text section-lead">
+              効率的な実装フローにより、品質を保ちながら
+              スピーディーな納品を実現します。
+              進行中もスムーズなコミュニケーションを心がけています。
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="strengths__card">
+            <div class="strengths__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="2" />
+              </svg>
+            </div>
+
+            <h3 class="strengths__card-title section-title">
+              Clean Code
+            </h3>
+
+            <p class="strengths__card-text section-lead">
+              可読性と保守性を重視した、
+              整理されたセマンティックなコードを書きます。
+              長期運用を見据えた構造設計を行います。
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- Strengths ここまで -->
+
+    <!-- Workflow ここから -->
+    <section class="workflow" id="workflow">
+      <div class="workflow__container">
+
+        <div class="workflow__header">
+          <h2 class="section-title workflow__title">Workflow</h2>
+          <p class="section-lead workflow__lead">制作の流れ</p>
+        </div>
+
+        <div class="workflow__steps">
+
+          <!-- Step 01 -->
+          <div class="workflow__step">
+            <div class="workflow__number">01</div>
+            <div class="workflow__content">
+              <h3 class="workflow__step-title">ヒアリング</h3>
+              <p class="workflow__step-text">
+                プロジェクトの目的、ターゲット、スケジュール、技術要件などを詳しくお伺いします。
+                Figmaデザインデータを共有いただき、実装の方向性を確認します。
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="workflow__step">
+            <div class="workflow__number">02</div>
+            <div class="workflow__content">
+              <h3 class="workflow__step-title">見積もり・提案</h3>
+              <p class="workflow__step-text">
+                デザインデータを分析し、実装方法、スケジュール、費用の見積もりを提示します。
+                必要に応じて技術的な提案やアドバイスも行います。
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="workflow__step">
+            <div class="workflow__number">03</div>
+            <div class="workflow__content">
+              <h3 class="workflow__step-title">実装</h3>
+              <p class="workflow__step-text">
+                デザインデータを基に、精密なコーディングを行います。
+                定期的に進捗を共有し、フィードバックをいただきながら進めます。
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="workflow__step">
+            <div class="workflow__number">04</div>
+            <div class="workflow__content">
+              <h3 class="workflow__step-title">確認・修正</h3>
+              <p class="workflow__step-text">
+                実装が完了したら、デザインとの照合確認を行います。
+                修正が必要な箇所があれば対応し、最終的な品質チェックを実施します。
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="workflow__step">
+            <div class="workflow__number">05</div>
+            <div class="workflow__content">
+              <h3 class="workflow__step-title">納品</h3>
+              <p class="workflow__step-text">
+                コードファイル一式と必要なドキュメントを納品します。
+                納品後のサポートやメンテナンスについてもご相談いただけます。
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Workflow ここまで -->
+
+    <!-- FAQ ここから -->
+    <section class="faq" id="faq">
+      <div class="faq__container">
+
+        <div class="faq__header">
+          <h2 class="section-title">FAQ</h2>
+          <p class="section-lead">よくある質問</p>
+        </div>
+
+        <div class="faq__items">
+
+          <!-- Item 1 -->
+          <div class="faq__item">
+            <h3 class="faq__question section-title">
+              対応可能なデザインツールは何ですか？
+            </h3>
+            <p class="faq__answer section-lead">
+              主にFigmaを使用したデザインデータに対応していますが、Adobe XDやSketchなど他のツールからのデータも対応可能です。お気軽にご相談ください。
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq__item">
+            <h3 class="faq__question section-title">
+              納期はどのくらいですか？
+            </h3>
+            <p class="faq__answer section-lead">
+              プロジェクトの規模や複雑さによって異なりますが、通常のランディングページで1〜2週間、中規模サイトで3〜4週間程度が目安となります。お急ぎの場合もご相談ください。
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq__item">
+            <h3 class="faq__question section-title">
+              レスポンシブ対応は含まれますか？
+            </h3>
+            <p class="faq__answer section-lead">
+              はい、基本的にレスポンシブ対応を含めて実装いたします。PC、タブレット、スマートフォンなど、各デバイスで最適な表示を実現します。
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq__item">
+            <h3 class="faq__question section-title">
+              CMSへの組み込みは可能ですか？
+            </h3>
+            <p class="faq__answer section-lead">
+              WordPress、microCMS、Contentfulなど、各種CMSへのテーマ・テンプレート実装にも対応しています。静的HTMLからの実装も承ります。
+            </p>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq__item">
+            <h3 class="faq__question section-title">
+              修正対応はありますか？
+            </h3>
+            <p class="faq__answer section-lead">
+              納品後、一定期間内の修正対応を含めております。また、保守契約により継続的なサポートも提供可能です。詳細はお問い合わせください。
+            </p>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="faq__item">
+            <h3 class="faq__question section-title">
+              費用の目安を教えてください
+            </h3>
+            <p class="faq__answer section-lead">
+              ページ数、機能、スケジュールなどによって変動します。デザインデータを拝見した上で、詳細なお見積もりを提示させていただきます。まずはお気軽にお問い合わせください。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- FAQ ここまで -->
+
+    <!-- Contact ここから -->
+<section class="contact" id="contact">
+  <div class="contact__container">
+
+    <div class="contact__header">
+      <h2 class="section-title contact__title">Contact</h2>
+      <p class="section-lead contact__lead">お問い合わせ</p>
+    </div>
+
+    <form class="contact__form" action="#" method="post">
+
+      <!-- お名前 -->
+      <div class="contact__field">
+        <label for="name" class="contact__label">お名前*</label>
+        <input 
+          type="text" 
+          id="name"
+          name="name"
+          class="contact__input"
+          required>
+      </div>
+
+      <!-- 会社名 -->
+      <div class="contact__field">
+        <label for="company" class="contact__label">会社名</label>
+        <input 
+          type="text" 
+          id="company"
+          name="company"
+          class="contact__input">
+      </div>
+
+      <!-- メール -->
+      <div class="contact__field">
+        <label for="email" class="contact__label">メールアドレス*</label>
+        <input 
+          type="email" 
+          id="email"
+          name="email"
+          class="contact__input"
+          required>
+      </div>
+
+      <!-- 内容 -->
+      <div class="contact__field">
+        <label for="message" class="contact__label">お問い合わせ内容*</label>
+        <textarea 
+          id="message"
+          name="message"
+          class="contact__textarea"
+          rows="5"
+          required></textarea>
+      </div>
+
+      <button type="submit" class="contact__button">
+        送信する
+      </button>
+
+    </form>
+
+  </div>
+</section>
+<!-- Contact ここまで -->
+  </main>
+  <!-- Mainここまで -->
+
+  <!-- Footer ここから -->
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__logo">CRAFT WEB STUDIO</p>
+      <p class="footer__copyright">
+        © 2026 CRAFT WEB STUDIO. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <!-- Footer ここまで -->
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+<!--最初に入れるやつここまで-->
