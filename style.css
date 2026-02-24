@@ -1,0 +1,1218 @@
+/* =========================================
+   Reset + Base CSS
+========================================= */
+
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Base ---- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* =========================================
+   共通テキストカラー（追加）
+========================================= */
+
+.section-title {
+  color: #111111;
+}
+
+.section-lead {
+  color: #666666;
+}
+
+/* =========================================
+   Header SP
+========================================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  padding: 16px 8px;
+  /* 上下16 左右8 */
+  background-color: #f5f5f5;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ロゴ */
+
+.header__logo {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+}
+
+/* デフォルト（SP） */
+.header__nav--desktop {
+  display: none
+}
+
+/* ハンバーガー */
+
+.header__hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.header__hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #111111;
+}
+
+/* ===============================
+   Mobile Menu
+================================ */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1050;
+}
+
+.mobile-menu.is-active {
+  pointer-events: auto;
+}
+
+.mobile-menu__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.mobile-menu.is-active .mobile-menu__overlay {
+  opacity: 1;
+}
+
+.mobile-menu__container {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 85%;
+  max-width: 340px;
+  height: calc(100% - 32px);
+  background-color: #f4f1ea;
+  border-radius: 20px;
+  padding: 100px 28px 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateX(110%);
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ===============================
+   Mobile Close Button
+================================ */
+
+.mobile-menu__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ×の線 */
+.mobile-menu__close span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #111111;
+}
+
+/* 1本目 */
+.mobile-menu__close span:first-child {
+  transform: rotate(45deg);
+}
+
+/* 2本目 */
+.mobile-menu__close span:last-child {
+  transform: rotate(-45deg);
+}
+
+.mobile-menu.is-active .mobile-menu__container {
+  transform: translateX(0);
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.mobile-menu__link {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.mobile-menu__contact-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+
+
+/* =========================================
+   Hero Section
+========================================= */
+
+/* SP（デフォルト） */
+.hero {
+  padding: 80px 0;
+  margin-top: 80px;
+  background-color: #fff;
+}
+
+.hero__container {
+  max-width: 900px;
+  /* 中身の横幅固定 */
+  margin: 0 auto;
+  /* 横中央 */
+  padding: 0 16px;
+  /* SP左右16px */
+  text-align: center;
+  /* 中身中央 */
+}
+
+.hero__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 32px;
+}
+
+.hero__lead {
+  font-size: 18px;
+  line-height: 34px;
+  margin-bottom: 48px;
+}
+
+.hero__button {
+  display: inline-block;
+  /* ← inline-flexやめる */
+  width: 280px;
+  height: 70px;
+  line-height: 70px;
+  /* ← 縦中央 */
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+
+/* ===============================
+   Services Section　ここから
+=============================== */
+
+.services {
+  padding: 80px 0;
+}
+
+.services__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header */
+
+.services__header {
+  text-align: center;
+  margin-bottom: 64px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services__title {
+  font-size: 22px;
+  line-height: 56px;
+  margin-bottom: 16px;
+}
+
+.services__lead {
+  font-size: 16px;
+  line-height: 28.8px;
+}
+
+/* List */
+
+.services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  /* ← カード間64px */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.services__item {
+  text-align: center;
+  /* ← ★タイトル中央寄せ */
+}
+
+.services__item-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 20px;
+  /* ← ★本文との間20px */
+  text-align: center;
+}
+
+.services__item-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  /* ← 本文は左寄せ維持 */
+}
+
+
+
+/* ===============================
+   Services Section　ここまで
+=============================== */
+
+/* =========================================
+   Portfolio Sectionここから
+========================================= */
+
+.portfolio {
+  padding: 80px 16px;
+}
+
+.portfolio__container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Header */
+
+.portfolio__header {
+  text-align: center;
+}
+
+.portfolio__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 56px;
+  margin-bottom: 16px;
+}
+
+.portfolio__lead {
+  font-size: 16px;
+  line-height: 28.8px;
+  padding-bottom: 32px;
+}
+
+/* Cards */
+
+.portfolio__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Card */
+
+.portfolio__card {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  text-decoration: none;
+  color: inherit;
+   cursor: pointer;
+   align-items: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+
+}
+
+
+.portfolio__image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 343px;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.portfolio__image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.25) 100%);
+  transition: opacity 0.4s ease;
+}
+
+/* Image */
+
+.portfolio__image {
+  width:100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+/* Image Hover Animation */
+
+
+
+.portfolio__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio__card:hover .portfolio__image {
+  transform: scale(1.05);
+}
+
+/* Content */
+
+.portfolio__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}
+
+/* Title */
+
+.portfolio__card-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+}
+
+/* Text */
+
+.portfolio__card-text {
+  font-size: 16px;
+  line-height: 24px;
+   text-align: center;
+}
+
+/* Tags */
+
+/* SP（デフォルト） */
+
+.portfolio__tags {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding-top: 16px;
+  overflow-x: auto;
+  justify-content: center; /* ← 追加 */
+}
+
+.portfolio__tag {
+  font-size: 16px;
+  color: #666666;
+  padding: 0 8px;
+  border-radius: 6px;
+  background: #F5F5F5;
+  border: 1.9px solid #111111;
+   text-align: center;
+}
+
+/* =========================================
+   Portfolio Sectionここまで
+========================================= */
+
+/* =========================================
+   Strengths Section
+========================================= */
+
+/* SP */
+.strengths {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.strengths__container {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.strengths__header {
+  text-align: center;
+}
+
+.strengths__title {
+  font-size: 22px;
+  line-height: 56px;
+  margin-bottom: 16px;
+}
+
+.strengths__lead {
+  font-size: 16px;
+  line-height: 28.8px;
+}
+
+.strengths__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 88px;
+}
+
+.strengths__card {
+  text-align: center;
+}
+
+.strengths__icon {
+  width: 56px;
+  height: 56px;
+  background: #111111;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.strengths__card-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.strengths__card-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* ===============================
+   Workflow Section
+=============================== */
+
+.workflow {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.workflow__container {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.workflow__header {
+  text-align: center;
+}
+
+.workflow__lead {
+  padding-bottom: 64px;
+}
+
+/* Steps */
+
+.workflow__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.workflow__step {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.workflow__number {
+  width: 80px;
+  height: 80px;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 28.8px;
+}
+
+.workflow__content {
+  flex: 1;
+}
+
+.workflow__step-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 16px;
+  color: #111111;
+}
+
+.workflow__step-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+
+/* ============================= */
+/* FAQ - SP */
+/* ============================= */
+
+.faq {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.faq__container {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* Header */
+
+.faq__header {
+  text-align: center;
+}
+
+.faq__title {
+  font-size: 22px;
+  line-height: 56px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.faq__lead {
+  font-size: 16px;
+  line-height: 28.8px;
+  color: #666666;
+  padding-bottom: 88px;
+}
+
+/* Items */
+
+.faq__items {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.faq__item {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Question */
+
+.faq__question {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Answer */
+
+.faq__answer {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #666666;
+}
+
+
+/* ===============================
+   Contact - SP
+=============================== */
+
+.contact {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.contact__container {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.contact__header {
+  text-align: center;
+}
+
+.contact__title {
+  font-size: 22px;
+  line-height: 56px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.contact__lead {
+  font-size: 16px;
+  line-height: 28.8px;
+  color: #666666;
+  padding-bottom: 80px;
+}
+
+/* Form */
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Field */
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* ラベルとinputの間隔 */
+}
+
+/* ラベル */
+
+.contact__label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28.8px;
+  color: #111111;
+}
+
+/* input / textarea */
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.contact__input {
+  height: 70px;
+}
+
+.contact__textarea {
+  height: 210px;
+  resize: none;
+}
+
+/* フィールド間隔（inputから次ラベルまで64） */
+
+.contact__field+.contact__field {
+  margin-top: 32px;
+}
+
+/* Button */
+
+.contact__button {
+  width: 280px;
+  height: 70px;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 700;
+  margin: 64px auto 0;
+}
+
+
+
+
+/* デモ注意書き */
+
+.contact__note {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #888888;
+  text-align: center;
+}
+
+
+
+
+
+/* ============================= */
+/* Footer - SP */
+/* ============================= */
+
+.footer {
+  padding: 16px 0;
+  background: #222222;
+}
+
+.footer__container {
+  text-align: center;
+}
+
+.footer__logo {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.footer__copyright {
+  font-size: 10px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+
+
+/* =========================================
+   Scroll Lock
+========================================= */
+
+.body--fixed {
+  overflow: hidden;
+}
+
+/* レスポンシブここから */
+
+/* =========================================
+   Desktop Header
+========================================= */
+
+@media (min-width: 1024px) {
+
+  .header {
+    height: 72px;
+    padding: 16px 120px;
+    /* 上下16 左右120 */
+  }
+
+  .header__logo {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .header__nav--desktop {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .header__nav-list {
+    display: flex;
+    gap: 32px;
+  }
+
+  .header__nav-link {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .header__nav-link:hover {
+    opacity: 0.6;
+  }
+
+  .header__contact-btn {
+    padding: 8px 32px;
+    background-color: #000000;
+    color: #ffffff;
+    /* ← #111111だと見えなくなるので修正 */
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .header__hamburger {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+
+
+}
+
+
+
+@media (min-width: 768px) {
+
+
+  /* Hero */
+  .hero {
+    padding: 120px 0;
+    margin-top: 120px;
+  }
+
+  .hero__container {
+    max-width: 1200px;
+    padding: 0 120px;
+  }
+
+  .hero__title {
+    font-size: 64px;
+    white-space: nowrap;
+  }
+
+  .hero__button {
+    width: 200px
+  }
+
+
+  /* SP改行制御 */
+  .u-sp-only {
+    display: none;
+  }
+
+  /* Hero ここまで */
+
+  /* Services */
+  .services {
+    padding: 120px 0;
+  }
+
+  .services__container {
+    padding: 0 120px;
+  }
+
+  .services__title {
+    font-size: 40px;
+  }
+
+  .services__list {
+    gap: 24px;
+  }
+
+  .services__item {
+    padding: 24px 0;
+  }
+
+  .services__item-title {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  /* Portfolio */
+  .portfolio {
+    padding: 120px 0;
+  }
+
+  .portfolio__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 120px;
+  }
+
+  .portfolio__title {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .portfolio__cards {
+    flex-direction: row;
+    justify-content: center;
+    /* ← 中央寄せ */
+    gap: 40px;
+  }
+
+  .portfolio__card {
+    width: 570px;
+    gap: 32px;
+  }
+
+
+  .portfolio__image-wrapper {
+    width: 570px;
+    height: 400px;
+    max-width: none;
+  }
+
+
+  .portfolio__image {
+    max-width: none;
+    width: 570px;
+    height: 400px;
+  }
+
+  .portfolio__content {
+    gap: 16px;
+  }
+
+  .portfolio__card-title {
+    font-size: 24px;
+  }
+
+  /* Portfolio ここまで */
+
+
+
+  /* Strengths ここから */
+
+  .strengths {
+    padding: 120px 0;
+  }
+
+  .strengths__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 120px;
+  }
+
+  .strengths__title {
+    font-size: 40px;
+  }
+
+  .strengths__cards {
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 64px;
+  }
+
+  .strengths__card {
+    flex: 1;
+    text-align: left;
+    max-width: 300px;
+  }
+
+  .strengths__icon {
+    margin: 0 0 16px 0;
+  }
+
+  .strengths__card-title {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+    white-space: nowrap;
+  }
+
+  .strengths__card-text {
+    line-height: 27px;
+  }
+
+  /* Strengths ここまで */
+
+  /* Workflow ここから */
+
+  .workflow {
+    padding: 120px 0;
+  }
+
+  .workflow__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .workflow__title {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+
+  .workflow__lead {
+    padding-bottom: 80px;
+  }
+
+  .workflow__steps {
+    gap: 64px;
+  }
+
+  .workflow__step {
+    align-items: flex-start;
+    /* 上揃え */
+  }
+
+  .workflow__step-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .workflow__step-text {
+    line-height: 27px;
+  }
+
+  /* Workflow ここまで */
+
+
+
+  /* FAQ ここから */
+
+  .faq {
+    padding: 120px 0;
+  }
+
+  .faq__container {
+    max-width: 1200px;
+    /* 他セクションと合わせてOK */
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* Header */
+
+  .faq__title {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .faq__lead {
+    padding-bottom: 80px;
+  }
+
+  /* Items */
+
+  .faq__items {
+    gap: 24px;
+  }
+
+  .faq__question {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  /* FAQ ここまで */
+
+  /* Contact ここから */
+
+  .contact {
+    padding: 120px 0;
+  }
+
+  .contact__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 120px;
+  }
+
+  .contact__title {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+
+  .contact__button {
+    width: 200px;
+  }
+
+
+/* デモ注意書き（PC） */
+
+.contact__note {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #888888;
+  text-align: center;
+}
+
+
+
+
+  /* Contact ここまで */
+
+
+  /* Footer ここから */
+  .footer {
+    padding: 16px 0;
+  }
+
+  .footer__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  /* Footer ここまで */
+
+
+}
+
+/* レスポンシブここまで */
+
+@media (max-width: 767px) {
+  .u-sp-only {
+    display: inline;
+  }
+}
